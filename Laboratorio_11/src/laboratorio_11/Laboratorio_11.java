@@ -9,13 +9,13 @@ package laboratorio_11;
  * @author neptaly
  */
 public class Laboratorio_11 {
-
     /**
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+       PantallaUsuario pu = new PantallaUsuario();
+       pu.setVisible(true);
        System.out.print("adae");
        //new PantallaUsuario().setVisible(true);
     }
-    
 }

@@ -23,16 +23,13 @@ public class PlayList {
         if(listaCanciones == null){
             listaCanciones = new ArrayList<>();
         }
+        this.listaCanciones.add(cancion);
     }
     
     public List<Cancion> getListaCanciones(){
         return this.listaCanciones;
     }
-    
-    public void agregarCancionALista(Cancion cancion){
-        this.listaCanciones.add(cancion);
-    }
-    
+     
     public String getNombrePlayList(){
         return this.nombre;
     }
