@@ -1,0 +1,43 @@
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package laboratorio_11;
+
+import java.util.List;
+import java.util.ArrayList;
+/**
+ *
+ * @author neptaly
+ */
+public class PlayList {
+    
+    private String nombre;
+    private List<Cancion> listaCanciones;
+    
+    public PlayList(String nombre){
+        this.nombre = nombre;
+    }
+    
+    public void agregarCanciones(Cancion cancion){
+        if(listaCanciones == null){
+            listaCanciones = new ArrayList<>();
+        }
+    }
+    
+    public List<Cancion> getListaCanciones(){
+        return this.listaCanciones;
+    }
+    
+    public void agregarCancionALista(Cancion cancion){
+        this.listaCanciones.add(cancion);
+    }
+    
+    public String getNombrePlayList(){
+        return this.nombre;
+    }
+    
+    public void setNombrePlayList(String nombre){
+        this.nombre = nombre;
+    }            
+}
