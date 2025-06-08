@@ -89,7 +89,7 @@ public class PantallaAñadirPlayList extends javax.swing.JFrame {
     private void btnAñadirPlayListActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirPlayListActionPerformed
         String nombre = getNombreAgregar.getText();
         user.crearNuevaPlayList(nombre);
-        JOptionPane.showMessageDialog(null, "Play list creada con extito!");
+        JOptionPane.showMessageDialog(null, "PlayList creada con éxito!");
         getNombreAgregar.setText("");
     }//GEN-LAST:event_btnAñadirPlayListActionPerformed
 
