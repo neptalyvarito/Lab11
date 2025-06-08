@@ -12,11 +12,13 @@ import java.util.ArrayList;
 public class Usuario {
     private String nombre;
     private String correo;
+    private String contraseña;
     private List<PlayList> listaDePlayList;
     
-    public Usuario(String nombre, String correo){
+    public Usuario(String nombre, String correo, String contraseña){
         this.nombre = nombre;
         this.correo = correo;
+        this.contraseña=contraseña;
         this.listaDePlayList = new ArrayList<>();
     } 
     
@@ -38,5 +40,8 @@ public class Usuario {
     }
     public void setCorreo(String correo){
         this.correo = correo;
+    }
+    public String getContraseña(){
+        return contraseña;
     }
 }
