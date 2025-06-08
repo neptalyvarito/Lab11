@@ -10,7 +10,7 @@ import java.util.ArrayList;
  * @author neptaly
  */
 public class PantallaUsuario extends javax.swing.JFrame {
-    ArrayList jlis = new ArrayList<>();
+   
     DefaultListModel modelo = new DefaultListModel();
     /**
      * Creates new form PantallaUsuario
@@ -59,6 +59,11 @@ public class PantallaUsuario extends javax.swing.JFrame {
 
         jLabel2.setText("Elige tu PlayList del dia:");
 
+        listaPlayList.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                listaPlayListMouseClicked(evt);
+            }
+        });
         jScrollPane2.setViewportView(listaPlayList);
 
         btnRefrescar.setText("Refrescar");
@@ -78,7 +83,7 @@ public class PantallaUsuario extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(24, 24, 24)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -107,9 +112,9 @@ public class PantallaUsuario extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(nombreBienvenida)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nombreBienvenida, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(160, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
@@ -128,12 +133,12 @@ public class PantallaUsuario extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
-        nombreBienvenida.setText(user.getNombre());
+        nombreBienvenida.setText(user.getNombre()+" !");
         llenarList();
     }//GEN-LAST:event_formWindowOpened
     
     public void llenarList(){
-         modelo.removeAllElements();
+        modelo.removeAllElements();
         for(PlayList playl : this.user.getListaDePlayList()){
             modelo.addElement(playl.getNombrePlayList());
         }
@@ -146,6 +151,20 @@ public class PantallaUsuario extends javax.swing.JFrame {
     private void btnRefrescarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefrescarActionPerformed
       llenarList();
     }//GEN-LAST:event_btnRefrescarActionPerformed
+
+    private void listaPlayListMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_listaPlayListMouseClicked
+        
+        String nombre = listaPlayList.getSelectedValue();
+        PlayList pl = null;
+        
+        for(PlayList busqueda : user.getListaDePlayList()){
+            if(busqueda.getNombrePlayList().equals(nombre)){
+                pl = busqueda;
+                continue;
+            }
+        }
+        new Pantalla_MuestraPlayList(pl).setVisible(true);    
+    }//GEN-LAST:event_listaPlayListMouseClicked
 
     /**
      * @param args the command line arguments

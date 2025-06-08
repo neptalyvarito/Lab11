@@ -17,7 +17,7 @@ public class Laboratorio_11 {
      */
     public static HashMap<String, Usuario> usuarios = new HashMap<>();
     public static void main(String[] args) {
-       Usuario user = new Usuario("nepta", "nepta", "123"); 
+       Usuario user = new Usuario("Nepta", "nepta", "123"); 
        Cancion can1= new Cancion("Andres Calamaro", "Para no olvidar", "1992", "3:30");
        Cancion can2= new Cancion("Los Rodrigues", "Mucho mejor", "2002", "2:43");
        Cancion can3= new Cancion("Charly Garcia", "Los dinosaurios", "1990", "4:30");

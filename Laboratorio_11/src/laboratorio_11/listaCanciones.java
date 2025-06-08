@@ -10,14 +10,18 @@ import java.util.ArrayList;
  * @author neptaly
  */
 public class listaCanciones {
-    private static List<Cancion> listTodasCanciones;
+    
+    private static List<Cancion> listTodasCanciones = new ArrayList<>();
+    
     public static void listaCanciones(){
         listTodasCanciones = null;
     }
+    
     public static void agregarCancion(Cancion cancion){
-        if(listTodasCanciones == null){
-            listTodasCanciones = new ArrayList<>();
-        }
+        
         listTodasCanciones.add(cancion);
+    }
+    public static List<Cancion> getLista(){
+        return listTodasCanciones;
     }
 }

@@ -36,7 +36,7 @@ public class PantallaAñadirPlayList extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
 
-        btnAñadirPlayList.setText("jButton1");
+        btnAñadirPlayList.setText("Añadir");
         btnAñadirPlayList.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnAñadirPlayListActionPerformed(evt);
@@ -62,7 +62,7 @@ public class PantallaAñadirPlayList extends javax.swing.JFrame {
                         .addComponent(jLabel1)
                         .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                     .addGroup(layout.createSequentialGroup()
-                        .addComponent(getNombreAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 152, Short.MAX_VALUE)
+                        .addComponent(getNombreAgregar, javax.swing.GroupLayout.DEFAULT_SIZE, 155, Short.MAX_VALUE)
                         .addGap(31, 31, 31)
                         .addComponent(btnAñadirPlayList)
                         .addGap(41, 41, 41))))

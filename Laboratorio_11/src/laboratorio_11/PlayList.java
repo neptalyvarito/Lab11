@@ -27,6 +27,9 @@ public class PlayList {
     }
     
     public List<Cancion> getListaCanciones(){
+        if(listaCanciones == null){
+            listaCanciones = new ArrayList<>();
+        }
         return this.listaCanciones;
     }
      

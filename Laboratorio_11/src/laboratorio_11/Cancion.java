@@ -22,4 +22,27 @@ public class Cancion {
         this.nombre = nombre;
     }
     
+    public String getAutor(){
+        return this.autor;
+    }
+    public void setAutor(String autor){
+        this.autor = autor;
+    }
+    public String getNombre(){
+        return this.nombre;
+    }
+    public void setNombre(String nombre){
+        this.nombre = nombre;
+    }
+    public String getDuracion(){
+        return this.duracion;
+    }
+    public void setDuracion(String dur){
+        this.duracion = dur;
+    }
+
+
+
+
+
 }
