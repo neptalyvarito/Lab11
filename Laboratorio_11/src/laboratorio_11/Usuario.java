@@ -23,7 +23,8 @@ public class Usuario {
     } 
     
     public void crearNuevaPlayList(String nombre){
-        PlayList playList = new PlayList(nombre);
+        PlayList playList = new PlayList(nombre);        
+        listaDePlayList.add(playList);
     }
     
     public List<PlayList> getListaDePlayList(){

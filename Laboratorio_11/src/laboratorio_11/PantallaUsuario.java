@@ -3,19 +3,25 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package laboratorio_11;
-
+import javax.swing.*;
+import java.util.ArrayList;
 /**
  *
  * @author neptaly
  */
 public class PantallaUsuario extends javax.swing.JFrame {
-
+    ArrayList jlis = new ArrayList<>();
+    DefaultListModel modelo = new DefaultListModel();
     /**
      * Creates new form PantallaUsuario
      */
-    public PantallaUsuario() {
+    Usuario user;
+    public PantallaUsuario(Usuario user) {
         initComponents();
+        this.user = user;
+        listaPlayList.setModel(modelo);
     }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -29,19 +35,38 @@ public class PantallaUsuario extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         nombreBienvenida = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
-        list1 = new java.awt.List();
-        jButton1 = new javax.swing.JButton();
+        btnAñadir = new javax.swing.JButton();
         jLabel2 = new javax.swing.JLabel();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        listaPlayList = new javax.swing.JList<>();
+        btnRefrescar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
-        jLabel1.setText("!Hola de nuevo ");
+        jLabel1.setText("! Hola de nuevo ");
 
-        nombreBienvenida.setText("jLabel2");
-
-        jButton1.setText("jButton1");
+        btnAñadir.setText("<html><center>Agregar nueva<br>PlayList</center></html>");
+        btnAñadir.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAñadirActionPerformed(evt);
+            }
+        });
 
         jLabel2.setText("Elige tu PlayList del dia:");
+
+        jScrollPane2.setViewportView(listaPlayList);
+
+        btnRefrescar.setText("Refrescar");
+        btnRefrescar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnRefrescarActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -49,22 +74,30 @@ public class PantallaUsuario extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(32, 32, 32)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jLabel2)
-                    .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 121, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
+                .addComponent(jLabel2)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(24, 24, 24)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 166, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(btnAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(btnRefrescar))
+                .addGap(14, 14, 14))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(26, 26, 26)
                 .addComponent(jLabel2)
-                .addGap(23, 23, 23)
-                .addComponent(list1, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(29, 29, 29)
-                .addComponent(jButton1)
-                .addContainerGap(35, Short.MAX_VALUE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(btnAñadir, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(btnRefrescar)))
+                .addContainerGap(84, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -72,26 +105,47 @@ public class PantallaUsuario extends javax.swing.JFrame {
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(98, 98, 98)
+                .addGap(31, 31, 31)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(nombreBienvenida)
-                .addContainerGap(106, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
             .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(20, 20, 20)
+                .addGap(32, 32, 32)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(nombreBienvenida))
-                .addGap(18, 18, 18)
-                .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        nombreBienvenida.setText(user.getNombre());
+        llenarList();
+    }//GEN-LAST:event_formWindowOpened
+    
+    public void llenarList(){
+         modelo.removeAllElements();
+        for(PlayList playl : this.user.getListaDePlayList()){
+            modelo.addElement(playl.getNombrePlayList());
+        }
+    }
+    
+    private void btnAñadirActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAñadirActionPerformed
+        new PantallaAñadirPlayList(user).setVisible(true);
+    }//GEN-LAST:event_btnAñadirActionPerformed
+
+    private void btnRefrescarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRefrescarActionPerformed
+      llenarList();
+    }//GEN-LAST:event_btnRefrescarActionPerformed
 
     /**
      * @param args the command line arguments
@@ -123,17 +177,18 @@ public class PantallaUsuario extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PantallaUsuario().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton jButton1;
+    private javax.swing.JButton btnAñadir;
+    private javax.swing.JButton btnRefrescar;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
-    private java.awt.List list1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JList<String> listaPlayList;
     private javax.swing.JLabel nombreBienvenida;
     // End of variables declaration//GEN-END:variables
 }

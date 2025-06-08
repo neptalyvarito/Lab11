@@ -15,7 +15,7 @@ public class Cancion {
     private String duracion;
     private String nombre;
     
-    public Cancion(String autor, String fecPublicacion, String duracion, String nombre){
+    public Cancion(String autor, String nombre, String fecPublicacion, String duracion){
         this.autor = autor;
         this.fecPublicacion = fecPublicacion;
         this.duracion = duracion;

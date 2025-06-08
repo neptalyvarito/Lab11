@@ -53,7 +53,7 @@ public class registrarUsuario extends javax.swing.JFrame {
         jLabel2.setText("correo");
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel3.setText("registarse");
+        jLabel3.setText("Registarse");
 
         btnRegistrar.setText("Registrarse");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {

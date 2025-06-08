@@ -67,7 +67,7 @@ public class iniciarSecion extends javax.swing.JFrame {
         });
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
-        jLabel3.setText("iniciar secion");
+        jLabel3.setText("Iniciar secion");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -108,9 +108,9 @@ public class iniciarSecion extends javax.swing.JFrame {
                 .addComponent(txtContraseñaInicioSecion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(btnInicioSecion)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(btnRegistarse)
-                .addContainerGap(56, Short.MAX_VALUE))
+                .addContainerGap(44, Short.MAX_VALUE))
         );
 
         pack();
@@ -127,7 +127,7 @@ public class iniciarSecion extends javax.swing.JFrame {
            //cerramos la ventana anterior
            this.dispose();
            //invocamos a la pantalla usuario
-           new PantallaUsuario().setVisible(true);
+          // new PantallaUsuario().setVisible(true);
         this.dispose(); // Cierra la ventana de login
        } else {
            //mensaje emergente si el usuario no estaa registrado
