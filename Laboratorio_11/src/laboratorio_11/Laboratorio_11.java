@@ -17,8 +17,6 @@ public class Laboratorio_11 {
      */
     public static HashMap<String, Usuario> usuarios = new HashMap<>();
     public static void main(String[] args) {
-       PantallaUsuario pu = new PantallaUsuario();
-       pu.setVisible(true);
        System.out.print("adae");
        new iniciarSecion().setVisible(true);
       
