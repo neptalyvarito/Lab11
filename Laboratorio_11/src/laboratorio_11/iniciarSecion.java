@@ -38,7 +38,6 @@ public class iniciarSecion extends javax.swing.JFrame {
         txtContraseñaInicioSecion = new javax.swing.JTextField();
         btnInicioSecion = new javax.swing.JToggleButton();
         btnRegistarse = new javax.swing.JButton();
-        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -57,7 +56,7 @@ public class iniciarSecion extends javax.swing.JFrame {
                 txtCorreoInicioSecionActionPerformed(evt);
             }
         });
-        jPanel3.add(txtCorreoInicioSecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(6, 113, 215, 30));
+        jPanel3.add(txtCorreoInicioSecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 215, 30));
 
         jLabel1.setText("Correo:");
         jPanel3.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 90, -1, -1));
@@ -66,12 +65,14 @@ public class iniciarSecion extends javax.swing.JFrame {
         jPanel3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, -1, -1));
 
         txtContraseñaInicioSecion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(txtContraseñaInicioSecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 180, 215, 30));
+        jPanel3.add(txtContraseñaInicioSecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 215, 40));
 
         btnInicioSecion.setBackground(new java.awt.Color(0, 153, 255));
         btnInicioSecion.setForeground(new java.awt.Color(255, 255, 255));
         btnInicioSecion.setActionCommand("Iniciar sesion");
-        btnInicioSecion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        btnInicioSecion.setAlignmentX(0.9F);
+        btnInicioSecion.setAlignmentY(0.9F);
+        btnInicioSecion.setBorder(null);
         btnInicioSecion.setLabel("Iniciar sesion");
         btnInicioSecion.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -90,10 +91,7 @@ public class iniciarSecion extends javax.swing.JFrame {
         });
         jPanel3.add(btnRegistarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 280, 90, 30));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/image/logo.png"))); // NOI18N
-        jPanel3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 100, 150, 140));
-
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/image/city.png"))); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/image/Captura de pantalla 2025-06-08 203518.png"))); // NOI18N
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 210, 350));
 
@@ -176,7 +174,6 @@ public class iniciarSecion extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel7;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JTextField txtContraseñaInicioSecion;
     private javax.swing.JTextField txtCorreoInicioSecion;
