@@ -48,7 +48,7 @@ public class registrarUsuario extends javax.swing.JFrame {
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
         jLabel3.setText("Registarse");
         jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(55, 12, -1, -1));
 
@@ -76,6 +76,7 @@ public class registrarUsuario extends javax.swing.JFrame {
         jPanel1.add(txtContraseña, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 218, 220, 30));
 
         btnRegistrar.setBackground(new java.awt.Color(0, 153, 255));
+        btnRegistrar.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         btnRegistrar.setForeground(new java.awt.Color(255, 255, 255));
         btnRegistrar.setText("Registrarse");
         btnRegistrar.addActionListener(new java.awt.event.ActionListener() {

@@ -46,9 +46,9 @@ public class iniciarSecion extends javax.swing.JFrame {
         jPanel3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 36)); // NOI18N
+        jLabel3.setFont(new java.awt.Font("Segoe UI Black", 0, 36)); // NOI18N
         jLabel3.setText("Iniciar sesion");
-        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(17, 19, -1, -1));
+        jPanel3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 30, -1, -1));
 
         txtCorreoInicioSecion.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         txtCorreoInicioSecion.addActionListener(new java.awt.event.ActionListener() {
@@ -68,6 +68,7 @@ public class iniciarSecion extends javax.swing.JFrame {
         jPanel3.add(txtContraseñaInicioSecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 170, 215, 40));
 
         btnInicioSecion.setBackground(new java.awt.Color(0, 153, 255));
+        btnInicioSecion.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         btnInicioSecion.setForeground(new java.awt.Color(255, 255, 255));
         btnInicioSecion.setActionCommand("Iniciar sesion");
         btnInicioSecion.setAlignmentX(0.9F);
@@ -81,6 +82,7 @@ public class iniciarSecion extends javax.swing.JFrame {
         });
         jPanel3.add(btnInicioSecion, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 130, 40));
 
+        btnRegistarse.setFont(new java.awt.Font("Segoe UI Black", 0, 12)); // NOI18N
         btnRegistarse.setForeground(new java.awt.Color(0, 153, 255));
         btnRegistarse.setText("Registrarse");
         btnRegistarse.setBorder(null);
@@ -93,7 +95,7 @@ public class iniciarSecion extends javax.swing.JFrame {
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/com/image/Captura de pantalla 2025-06-08 203518.png"))); // NOI18N
         jLabel4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 210, 350));
+        jPanel3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 0, 210, 400));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -105,7 +107,7 @@ public class iniciarSecion extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, 420, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(jPanel3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
 
